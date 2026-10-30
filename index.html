@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="dark" data-fonte="vt323" data-tamanho="medio" data-contraste="normal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Five Nights at Dev's — portfólio interativo de Samuel.">
+  <title>Five Nights at Dev's — Samuel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="menu-page">
+
+  <div class="static-overlay" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="glitch-line" id="glitchLine" aria-hidden="true"></div>
+  <div class="glitch-burst" id="glitchBurst" aria-hidden="true"></div>
+
+  <main class="menu-screen">
+
+    <div class="menu-character" aria-hidden="true">
+      <svg viewBox="0 0 400 500" role="img" aria-label="Monitor amaldiçoado com rosto e olhos vermelhos brilhando">
+        <defs>
+          <radialGradient id="aura">
+            <stop offset="0%" stop-color="#ff0000" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#ff0000" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="eyeG">
+            <stop offset="0%" stop-color="#ff6060"/>
+            <stop offset="50%" stop-color="#ff0000"/>
+            <stop offset="100%" stop-color="#ff0000" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="metalG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2a2a2a"/>
+            <stop offset="100%" stop-color="#0a0a0a"/>
+          </linearGradient>
+        </defs>
+
+        <ellipse cx="200" cy="250" rx="220" ry="250" fill="url(#aura)"/>
+
+        <g fill="none" stroke-linecap="round">
+          <path d="M 130 400 Q 90 450 70 490" stroke="#550000" stroke-width="6"/>
+          <path d="M 165 405 Q 150 460 140 495" stroke="#444400" stroke-width="5"/>
+          <path d="M 200 410 Q 200 470 200 498" stroke="#005500" stroke-width="6"/>
+          <path d="M 235 405 Q 250 460 260 495" stroke="#550000" stroke-width="5"/>
+          <path d="M 270 400 Q 310 450 330 490" stroke="#005500" stroke-width="6"/>
+        </g>
+
+        <path d="M 140 380 L 110 415 L 290 415 L 260 380 Z" fill="#111"/>
+
+        <rect x="60" y="60" width="280" height="340" rx="24" fill="url(#metalG)" stroke="#3a3a3a" stroke-width="4"/>
+        <rect x="85" y="85" width="230" height="220" rx="14" fill="#030303" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="95" y="95" width="210" height="200" rx="8" fill="#001100"/>
+
+        <g opacity="0.3" stroke="#00ff88" stroke-width="1">
+          <line x1="95" y1="105" x2="305" y2="105"/>
+          <line x1="95" y1="115" x2="305" y2="115"/>
+          <line x1="95" y1="125" x2="305" y2="125"/>
+          <line x1="95" y1="135" x2="305" y2="135"/>
+          <line x1="95" y1="145" x2="305" y2="145"/>
+          <line x1="95" y1="155" x2="305" y2="155"/>
+          <line x1="95" y1="165" x2="305" y2="165"/>
+          <line x1="95" y1="175" x2="305" y2="175"/>
+          <line x1="95" y1="185" x2="305" y2="185"/>
+          <line x1="95" y1="195" x2="305" y2="195"/>
+          <line x1="95" y1="205" x2="305" y2="205"/>
+          <line x1="95" y1="215" x2="305" y2="215"/>
+          <line x1="95" y1="225" x2="305" y2="225"/>
+          <line x1="95" y1="235" x2="305" y2="235"/>
+          <line x1="95" y1="245" x2="305" y2="245"/>
+          <line x1="95" y1="255" x2="305" y2="255"/>
+          <line x1="95" y1="265" x2="305" y2="265"/>
+          <line x1="95" y1="275" x2="305" y2="275"/>
+          <line x1="95" y1="285" x2="305" y2="285"/>
+        </g>
+
+        <circle cx="155" cy="180" r="45" fill="url(#eyeG)" opacity="0.5"/>
+        <circle cx="245" cy="180" r="45" fill="url(#eyeG)" opacity="0.5"/>
+        <ellipse cx="155" cy="180" rx="30" ry="22" fill="#000"/>
+        <circle cx="155" cy="180" r="15" fill="#ff0000"/>
+        <circle cx="155" cy="180" r="7" fill="#fff"/>
+        <ellipse cx="245" cy="180" rx="30" ry="22" fill="#000"/>
+        <circle cx="245" cy="180" r="15" fill="#ff0000"/>
+        <circle cx="245" cy="180" r="7" fill="#fff"/>
+
+        <path d="M 120 240 Q 200 285 280 240" stroke="#ff2020" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+        <g fill="#ff5050" stroke="#000" stroke-width="1">
+          <rect x="135" y="242" width="11" height="12" rx="1"/>
+          <rect x="152" y="246" width="11" height="12" rx="1"/>
+          <rect x="169" y="249" width="11" height="12" rx="1"/>
+          <rect x="186" y="251" width="11" height="12" rx="1"/>
+          <rect x="203" y="251" width="11" height="12" rx="1"/>
+          <rect x="220" y="249" width="11" height="12" rx="1"/>
+          <rect x="237" y="246" width="11" height="12" rx="1"/>
+          <rect x="254" y="242" width="11" height="12" rx="1"/>
+        </g>
+
+        <path d="M 95 140 L 125 165 L 120 205" stroke="#fff" stroke-width="1" fill="none" opacity="0.4"/>
+        <path d="M 305 180 L 280 200 L 285 230" stroke="#fff" stroke-width="1" fill="none" opacity="0.4"/>
+
+        <rect x="85" y="315" width="230" height="70" rx="8" fill="#0a0a0a" stroke="#1a1a1a"/>
+        <circle cx="105" cy="335" r="4" fill="#00ff88"/>
+        <circle cx="120" cy="335" r="4" fill="#ff2020" opacity="0.6"/>
+        <circle cx="135" cy="335" r="4" fill="#ffaa00"/>
+        <text x="105" y="360" font-family="monospace" font-size="10" fill="#00ff88" font-weight="bold">SISTEMA ATIVO</text>
+        <text x="105" y="375" font-family="monospace" font-size="8" fill="#ff2020">⚠ NAO OLHE PARA TRAS</text>
+
+        <circle cx="280" cy="340" r="10" fill="#1a1a1a" stroke="#333"/>
+        <line x1="274" y1="340" x2="286" y2="340" stroke="#ff2020" stroke-width="2"/>
+        <circle cx="280" cy="368" r="10" fill="#1a1a1a" stroke="#333"/>
+        <line x1="280" y1="362" x2="280" y2="374" stroke="#00ff88" stroke-width="2"/>
+
+        <line x1="130" y1="60" x2="110" y2="15" stroke="#333" stroke-width="5"/>
+        <circle cx="110" cy="15" r="9" fill="#ff2020"/>
+        <circle cx="110" cy="15" r="4" fill="#ff8080"/>
+        <line x1="270" y1="60" x2="290" y2="15" stroke="#333" stroke-width="5"/>
+        <circle cx="290" cy="15" r="9" fill="#ff2020"/>
+        <circle cx="290" cy="15" r="4" fill="#ff8080"/>
+
+        <path d="M 200 60 Q 215 30 200 10" stroke="#660000" stroke-width="3" fill="none"/>
+        <path d="M 180 60 Q 165 30 175 15" stroke="#666600" stroke-width="2" fill="none"/>
+        <path d="M 220 60 Q 235 30 225 15" stroke="#006600" stroke-width="2" fill="none"/>
+
+        <g transform="translate(265, 130)" fill="#000">
+          <ellipse cx="0" cy="0" rx="4" ry="3"/>
+          <circle cx="0" cy="-4" r="2"/>
+          <line x1="-2" y1="-2" x2="-7" y2="-6" stroke="#000" stroke-width="1"/>
+          <line x1="2" y1="-2" x2="7" y2="-6" stroke="#000" stroke-width="1"/>
+          <line x1="-2" y1="0" x2="-7" y2="0" stroke="#000" stroke-width="1"/>
+          <line x1="2" y1="0" x2="7" y2="0" stroke="#000" stroke-width="1"/>
+          <line x1="-2" y1="2" x2="-7" y2="6" stroke="#000" stroke-width="1"/>
+          <line x1="2" y1="2" x2="7" y2="6" stroke="#000" stroke-width="1"/>
+        </g>
+      </svg>
+    </div>
+
+    <h1 class="menu-title" id="menuTitle" aria-label="Five Nights at Dev's"></h1>
+
+    <nav class="menu-options" id="menuOptions" aria-label="Menu principal">
+      <button class="menu-option" data-action="novo-jogo" data-target="jogo.html">
+        <span class="cursor">>></span> Novo Jogo
+      </button>
+      <button class="menu-option" data-action="opcoes" data-target="opcoes.html">
+        <span class="cursor" aria-hidden="true">  </span> Opções
+      </button>
+      <button class="menu-option" data-action="sobre" data-target="sobre.html">
+        <span class="cursor" aria-hidden="true">  </span> Sobre Mim
+      </button>
+    </nav>
+
+    <div class="menu-footer">
+      <span class="version">v 1.0.0</span>
+      <span class="copyright">©<span id="ano">2025</span> Samuel</span>
+    </div>
+
+  </main>
+
+  <div class="loading-screen" id="loadingScreen" hidden aria-live="polite">
+    <div class="loading-content">
+      <p class="loading-title">Five Nights at Dev's</p>
+      <p class="loading-text">Carregando<span class="dots"></span></p>
+      <div class="loading-bar"><div class="loading-bar-fill"></div></div>
+      <p class="loading-hint">Não desligue o computador…</p>
+    </div>
+  </div>
+
+  <div class="start-prompt" id="startPrompt">
+    <p>Clique ou pressione qualquer tecla para iniciar</p>
+    <p class="prompt-small">(o som ambiente será ativado)</p>
+  </div>
+
+  <script src="js/config.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    function disparar() {
+      const line = document.getElementById('glitchLine');
+      const burst = document.getElementById('glitchBurst');
+      document.body.classList.add('glitching');
+      if (line) { line.classList.remove('active'); void line.offsetWidth; line.classList.add('active'); }
+      if (burst) { burst.classList.remove('active'); void burst.offsetWidth; burst.classList.add('active'); }
+      setTimeout(() => document.body.classList.remove('glitching'), 420);
+    }
+    function loop() { disparar(); setTimeout(loop, 10000 + Math.random() * 12000); }
+    setTimeout(loop, 5000 + Math.random() * 4000);
+  });
+</script>
+</body>
+</html>

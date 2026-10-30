@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="dark" data-fonte="vt323" data-tamanho="medio" data-contraste="normal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jogo de diálogo — portfólio de Samuel, desenvolvedor front-end.">
+  <title>Jogando… — Samuel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="jogo-page">
+
+  <div class="static-overlay" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="glitch-line" id="glitchLine" aria-hidden="true"></div>
+  <div class="glitch-burst" id="glitchBurst" aria-hidden="true"></div>
+
+  <header class="game-topbar">
+    <a href="index.html" class="back-menu">← Menu principal</a>
+    <span class="clock" id="clock">--:--</span>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Alternar tema">🌙</button>
+  </header>
+
+  <main class="game-main">
+
+    <section id="hero" class="section hero-section">
+      <div class="hero-grid">
+
+        <div class="hero-avatar" aria-hidden="true">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Avatar de Samuel">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#7c5cff"/>
+                <stop offset="100%" stop-color="#00e0b8"/>
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="95" fill="url(#g1)"/>
+            <circle cx="100" cy="82" r="34" fill="#16162a"/>
+            <rect x="52" y="126" width="96" height="52" rx="26" fill="#16162a"/>
+            <circle cx="87" cy="80" r="5" fill="#00e0b8"/>
+            <circle cx="113" cy="80" r="5" fill="#00e0b8"/>
+            <path d="M87 94 Q100 103 113 94" stroke="#00e0b8" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="hero-content">
+          <p class="greeting" id="greeting">…</p>
+          <h1>Eu sou <span class="nome">Samuel</span></h1>
+          <p class="tagline">Desenvolvedor front-end em formação • SENAC MedTec</p>
+
+          <div class="game-box" role="region" aria-label="Diálogo interativo">
+            <div class="game-header">
+              <span class="game-dot" aria-hidden="true"></span>
+              <span>dev.quest — diálogo</span>
+            </div>
+            <p class="dialogue" id="dialogue" aria-hidden="true"></p>
+            <p class="sr-only" id="dialogue-sr" aria-live="polite" aria-atomic="true"></p>
+            <div class="choices" id="choices"></div>
+          </div>
+
+          <a class="btn btn-primary" href="#projetos">Ir direto aos projetos →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <h2>Sobre mim</h2>
+      <p>Sou <strong>Samuel</strong>, estudante do Técnico em Desenvolvimento de Sistemas do SENAC MedTec. Comecei querendo entender como as páginas funcionavam por dentro e acabei me apaixonando pela parte que ninguém vê: a estrutura semântica, a acessibilidade e o CSS que funciona no celular e no teclado.</p>
+      <p>Hoje construo interfaces que funcionam em qualquer tela — e o meu próximo passo é consolidar o <strong>JavaScript</strong> (eventos, DOM, arrays) e praticar versionamento com Git como um profissional.</p>
+    </section>
+
+    <section id="habilidades" class="section">
+      <h2>Habilidades</h2>
+      <ul class="skills">
+        <li class="skill"><span class="skill-name">HTML semântico</span><span class="skill-level level-confortavel">Confortável</span></li>
+        <li class="skill"><span class="skill-name">CSS (Flexbox e Grid)</span><span class="skill-level level-praticando">Praticando</span></li>
+        <li class="skill"><span class="skill-name">JavaScript (DOM)</span><span class="skill-level level-praticando">Praticando</span></li>
+        <li class="skill"><span class="skill-name">Figma (protótipos)</span><span class="skill-level level-confortavel">Confortável</span></li>
+        <li class="skill"><span class="skill-name">Git e GitHub</span><span class="skill-level level-confortavel">Confortável</span></li>
+        <li class="skill"><span class="skill-name">Acessibilidade (a11y)</span><span class="skill-level level-iniciante">Iniciante</span></li>
+      </ul>
+    </section>
+
+    <section id="projetos" class="section">
+      <h2>Projetos</h2>
+      <div class="filter" id="filter" role="group" aria-label="Filtrar projetos por tecnologia"></div>
+      <div class="projects-grid" id="projects-grid"></div>
+      <p id="no-projects" class="no-projects" hidden>Nenhum projeto encontrado com esse filtro.</p>
+    </section>
+
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+      <p>Este formulário é uma <strong>demonstração</strong>: ele valida os campos no navegador, mas não envia nada de verdade. Nenhum dado é armazenado.</p>
+
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" autocomplete="name" aria-describedby="erro-nome">
+          <span class="error" id="erro-nome" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="erro-email">
+          <span class="error" id="erro-email" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" aria-describedby="erro-mensagem"></textarea>
+          <span class="error" id="erro-mensagem" role="alert"></span>
+        </div>
+        <div class="field field-checkbox">
+          <input type="checkbox" id="consentimento" name="consentimento" aria-describedby="erro-consentimento">
+          <label for="consentimento">Autorizo o uso dos dados acima apenas para responder a este contato (LGPD). Nada será compartilhado.</label>
+          <span class="error" id="erro-consentimento" role="alert"></span>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+        <p class="success" id="success-message" role="status" hidden></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="ano"></span> Samuel — Five Nights at Dev's</p>
+    <a href="#hero" class="back-top">Voltar ao topo ↑</a>
+  </footer>
+
+  <button class="back-to-top-btn" id="backToTop" type="button" aria-label="Voltar ao topo">↑</button>
+
+  <script src="js/config.js" defer></script>
+  <script src="js/jogo.js" defer></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    function disparar() {
+      const line = document.getElementById('glitchLine');
+      const burst = document.getElementById('glitchBurst');
+      document.body.classList.add('glitching');
+      if (line) { line.classList.remove('active'); void line.offsetWidth; line.classList.add('active'); }
+      if (burst) { burst.classList.remove('active'); void burst.offsetWidth; burst.classList.add('active'); }
+      setTimeout(() => document.body.classList.remove('glitching'), 420);
+    }
+    function loop() { disparar(); setTimeout(loop, 10000 + Math.random() * 12000); }
+    setTimeout(loop, 5000 + Math.random() * 4000);
+  });
+</script>
+</body>
+</html>

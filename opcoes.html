@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="dark" data-fonte="vt323" data-tamanho="medio" data-contraste="normal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opções — Five Nights at Dev's</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="opcoes-page">
+
+  <div class="static-overlay" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="glitch-line" id="glitchLine" aria-hidden="true"></div>
+  <div class="glitch-burst" id="glitchBurst" aria-hidden="true"></div>
+
+  <header class="game-topbar">
+    <a href="index.html" class="back-menu">← Menu principal</a>
+    <span class="title-small">OPÇÕES</span>
+    <span></span>
+  </header>
+
+  <main class="opcoes-main">
+
+    <h1 class="page-title">Opções</h1>
+    <p class="page-subtitle">Ajuste a experiência ao seu jeito. As escolhas ficam salvas no navegador.</p>
+
+    <div class="opcoes-grid">
+
+      <section class="opcao-card">
+        <h2>Tema</h2>
+        <p class="opcao-desc">Escolha entre escuro (padrão FNaF) ou claro.</p>
+        <div class="opcao-botoes" role="group" aria-label="Tema">
+          <button class="opt-btn" data-config="tema" data-valor="dark" type="button">🌙 Escuro</button>
+          <button class="opt-btn" data-config="tema" data-valor="light" type="button">☀️ Claro</button>
+        </div>
+      </section>
+
+      <section class="opcao-card">
+        <h2>Contraste</h2>
+        <p class="opcao-desc">Aumenta o contraste para melhor leitura.</p>
+        <div class="opcao-botoes" role="group" aria-label="Contraste">
+          <button class="opt-btn" data-config="contraste" data-valor="normal" type="button">Normal</button>
+          <button class="opt-btn" data-config="contraste" data-valor="alto" type="button">Alto</button>
+        </div>
+      </section>
+
+      <section class="opcao-card">
+        <h2>Fonte</h2>
+        <p class="opcao-desc">Escolha a tipografia do site.</p>
+        <div class="opcao-botoes" role="group" aria-label="Fonte">
+          <button class="opt-btn" data-config="fonte" data-valor="vt323" type="button">VT323 (padrão)</button>
+          <button class="opt-btn" data-config="fonte" data-valor="press-start" type="button">Press Start 2P</button>
+          <button class="opt-btn" data-config="fonte" data-valor="special-elite" type="button">Special Elite</button>
+          <button class="opt-btn" data-config="fonte" data-valor="system" type="button">Sistema (acessível)</button>
+        </div>
+      </section>
+
+      <section class="opcao-card">
+        <h2>Tamanho do texto</h2>
+        <p class="opcao-desc">Aumente o tamanho da fonte para ler melhor.</p>
+        <div class="opcao-botoes" role="group" aria-label="Tamanho do texto">
+          <button class="opt-btn" data-config="tamanho" data-valor="pequeno" type="button">Pequeno</button>
+          <button class="opt-btn" data-config="tamanho" data-valor="medio" type="button">Médio</button>
+          <button class="opt-btn" data-config="tamanho" data-valor="grande" type="button">Grande</button>
+          <button class="opt-btn" data-config="tamanho" data-valor="gigante" type="button">Gigante</button>
+        </div>
+      </section>
+
+      <section class="opcao-card opcao-card-larga">
+        <h2>Volume do som ambiente</h2>
+        <p class="opcao-desc">O som ambiente lembra a atmosfera de FNaF. Ajuste ou silencie.</p>
+        <div class="volume-row">
+          <span class="vol-label">🔇</span>
+          <input type="range" id="volume" min="0" max="100" step="1" value="50" aria-label="Volume do som ambiente">
+          <span class="vol-label">🔊</span>
+          <span class="vol-value" id="volValue">50%</span>
+        </div>
+      </section>
+
+      <section class="opcao-card opcao-card-larga">
+        <h2>Ações</h2>
+        <div class="opcao-botoes">
+          <button class="btn btn-secondary" id="resetConfig" type="button">Restaurar padrões</button>
+          <a class="btn btn-primary" href="jogo.html">Salvar e jogar →</a>
+        </div>
+      </section>
+
+    </div>
+
+    <p class="opcoes-status" id="status" role="status" aria-live="polite"></p>
+
+  </main>
+
+  <script src="js/config.js" defer></script>
+  <script src="js/opcoes.js" defer></script>
+</body>
+</html>
